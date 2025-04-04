@@ -54,8 +54,8 @@ I’m **Alvine Lumiti**, a passionate full-stack developer and digital creator w
 
 I love connecting with fellow innovators and tech enthusiasts. Whether you’re interested in collaborating, discussing ideas, or simply saying hi — feel free to reach out!
 
-[![GitHub](https://img.shields.io/badge/GitHub-Connect-black?style=for-the-badge&logo=github)](https://github.com/your-username)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/your-link)
+[![GitHub](https://img.shields.io/badge/GitHub-Connect-black?style=for-the-badge&logo=github)](https://github.com/Mal-archLumi)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)]((https://www.linkedin.com/in/alvine-lumiti-7a1a73299/))
 [![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:makutualvine@gmail.com)
 
 ---
