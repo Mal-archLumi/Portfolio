@@ -36,8 +36,8 @@
 I’m **Alvine Lumiti**, a passionate full-stack developer and digital creator with a flair for crafting immersive, user-centric experiences. My work focuses on leveraging modern technologies to solve real-world problems — whether that’s through smart farming solutions, community finance platforms, or stylish e-commerce systems.
 
 - **Email:** [makutualvine@gmail.com](mailto:makutualvine@gmail.com)
-- **Instagram:** [@lumsé](https://instagram.com/lumsé)
-- **LinkedIn:** [Alvine Lumiti](https://linkedin.com/in/your-link)
+- **Instagram:** [@lums_ke](https://instagram.com/lums_ke)
+- **LinkedIn:** [Alvine Lumiti]([https://www.linkedin.com/in/alvine-lumiti-7a1a73299/])
 
 ---
 
