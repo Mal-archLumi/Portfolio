@@ -1,0 +1,99 @@
+/* skill.css */
+.skills-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #58e0dc;
+  text-shadow: 0 0 10px #58e0dc;
+  margin-bottom: 0.5rem;
+}
+
+.accent-line {
+  height: 4px;
+  width: 60px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #58e0dc, #5370f0);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: #aaa;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+
+.cyber-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.cyber-card {
+  position: relative;
+  background: #2c2c2c;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(88, 224, 220, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.cyber-card:hover {
+  box-shadow: 0 0 30px rgba(88, 224, 220, 0.6);
+}
+
+.card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(88, 224, 220, 0.15) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  color: #58e0dc;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 8px #58e0dc;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.skill-progress {
+  margin-top: 1rem;
+  height: 8px;
+  width: 100%;
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 70%; /* You can adjust this dynamically later */
+  height: 100%;
+  background: linear-gradient(to right, #58e0dc, #5370f0);
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
