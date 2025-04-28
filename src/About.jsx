@@ -1,6 +1,7 @@
-// About.jsx (updated with profile photo)
+
 import { motion } from 'framer-motion';
-import ProfilePhoto from './assets/profile.jpg'; // Create assets folder and add your photo
+import ProfilePhoto from './assets/profile.jpg';
+import Resume from './assets/resume.pdf';
 
 export default function About() {
   return (
@@ -30,10 +31,11 @@ export default function About() {
         
         <div className="bio-content">
           <p className="bio-text">
-            A passionate full-stack developer and cybersecurity enthusiast based in Nairobi. 
-            With 2+ years of experience crafting digital solutions that blend innovation with functionality. 
-            I specialize in building secure, scalable applications that solve real-world problems.
+            I'm Alvine Lumiti, a full-stack developer and cybersecurity enthusiast based in Nairobi, Kenya. 
+            With over 2 years of experience, I build secure, scalable, and innovative web and mobile applications. 
+            My passion lies in solving real-world problems through code, blending creativity with technical expertise.
           </p>
+          <a href={Resume} download className="resume-btn">Download Resume</a>
           
           <div className="experience-grid">
             <div className="experience-card">
@@ -41,12 +43,36 @@ export default function About() {
               <p>Years Experience</p>
             </div>
             <div className="experience-card">
-              <h3>3+</h3>
+              <h3>5+</h3>
               <p>Projects Completed</p>
             </div>
             <div className="experience-card">
-              <h3>2+</h3>
+              <h3>3</h3>
               <p>Certifications</p>
+            </div>
+          </div>
+
+          <div className="timeline">
+            <h3>Career Timeline</h3>
+            <div className="timeline-item">
+              <h4>2023 - Present</h4>
+              <p>Freelance Full-Stack Developer</p>
+              <p>Developed web and mobile apps for clients across various industries.</p>
+            </div>
+            <div className="timeline-item">
+              <h4>2022 - 2023</h4>
+              <p>Junior Developer at Tech Startup</p>
+              <p>Contributed to building e-commerce platforms and internal tools.</p>
+            </div>
+            <div className="timeline-item">
+              <h4>2023 - Present</h4>
+              <p>B.Sc. Information Technology, Mount Kenya University</p>
+              <p>Graduated with a focus on software engineering and cybersecurity.</p>
+            </div>
+            <div className="timeline-item">
+              <h4>2025 - Present</h4>
+              <p>Certificate in Software Engineering, PLP Africe</p>
+              <p>Graduated with a focus on software engineering and cybersecurity.</p>
             </div>
           </div>
         </div>

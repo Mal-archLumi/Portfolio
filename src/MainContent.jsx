@@ -1,6 +1,15 @@
-// MainContent.jsx
+
 import { motion } from 'framer-motion';
 import { SiTypescript, SiPython, SiReact, SiNodedotjs, SiGraphql } from 'react-icons/si';
+import { Link } from 'react-router-dom';
+
+const techStack = [
+  { icon: <SiReact />, name: 'React' },
+  { icon: <SiTypescript />, name: 'TypeScript' },
+  { icon: <SiPython />, name: 'Python' },
+  { icon: <SiNodedotjs />, name: 'Node.js' },
+  { icon: <SiGraphql />, name: 'GraphQL' }
+];
 
 export default function MainContent() {
   return (
@@ -16,7 +25,7 @@ export default function MainContent() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          Full Stack Developer
+          Alvine Lumiti
         </motion.h1>
         
         <motion.p 
@@ -25,7 +34,7 @@ export default function MainContent() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          Building tomorrow's digital experiences
+          Crafting Innovative Digital Solutions
         </motion.p>
         
         <motion.div 
@@ -34,12 +43,15 @@ export default function MainContent() {
           animate={{ scale: 1 }}
           transition={{ delay: 0.6 }}
         >
-          <SiReact className="stack-icon" />
-          <SiTypescript className="stack-icon" />
-          <SiPython className="stack-icon" />
-          <SiNodedotjs className="stack-icon" />
-          <SiGraphql className="stack-icon" />
+          {techStack.map((tech, index) => (
+            <div key={index} className="stack-item">
+              <div className="stack-icon">{tech.icon}</div>
+              <span className="tooltip">{tech.name}</span>
+            </div>
+          ))}
         </motion.div>
+
+        <Link to="/projects" className="cta-btn">Explore My Work</Link>
       </div>
     </motion.section>
   );
