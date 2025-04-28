@@ -1,12 +1,64 @@
-# React + Vite
+# 👑 Alvine Lumiti's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> _Building digital experiences that merge innovation with impact._
 
-Currently, two official plugins are available:
+[![GitHub stars](https://img.shields.io/github/stars/Mal-archLumi/portfolio?style=social)](https://github.com/Mal-archLumi/Portfolio/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Mal-archLumi/your-repo?style=social)](https://github.com/Mal-archLumi/Portfolio/network/members)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)]((https://www.linkedin.com/in/alvine-lumiti-7a1a73299/))
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🔥 Featured Projects
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🌾 **Mkulima Hub – Your Smart Farming Companion**
+- **Tech:** Flutter + Supabase  
+- **Description:** A smart farming hub blending finance, markets, and community.
+- **Link:** [View Project](#)
+
+---
+
+### 🪙 **Pochi Yangu – Your Community Finance Companion**
+- **Tech:** React + Supabase  
+- **Description:** A community-driven digital wallet enabling secure group contributions, real-time financial tracking, and collaborative decision-making.
+- **Link:** [View Project](#)
+
+---
+
+### 🏙️ **Urban Contemporary – E-Commerce Platform**
+- **Tech:** HTML + CSS + JavaScript  
+- **Description:** Full-stack solution with payment integration.
+- **Link:** [View Project](#)
+
+---
+
+## 🚀 About Me
+
+I’m **Alvine Lumiti**, a passionate full-stack developer and digital creator with a flair for crafting immersive, user-centric experiences. My work focuses on leveraging modern technologies to solve real-world problems — whether that’s through smart farming solutions, community finance platforms, or stylish e-commerce systems.
+
+- **Email:** [makutualvine@gmail.com](mailto:makutualvine@gmail.com)
+- **Instagram:** [@lums_ke](https://instagram.com/lums_ke)
+- **LinkedIn:** [Alvine Lumiti]([https://www.linkedin.com/in/alvine-lumiti-7a1a73299/])
+
+---
+
+## 🛠️ Skills & Technologies
+
+- **Languages & Frameworks:** Flutter, React, HTML, CSS, JavaScript, Dart
+- **Backend & Databases:** Supabase, Firebase, Node.js
+- **Tools & Platforms:** Git, GitHub, VS Code, Figma
+- **Design:** UI/UX with a focus on vibrant, cyber-inspired aesthetics
+
+---
+
+## 🌐 Connect With Me
+
+I love connecting with fellow innovators and tech enthusiasts. Whether you’re interested in collaborating, discussing ideas, or simply saying hi — feel free to reach out!
+
+[![GitHub](https://img.shields.io/badge/GitHub-Connect-black?style=for-the-badge&logo=github)](https://github.com/Mal-archLumi)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)]((https://www.linkedin.com/in/alvine-lumiti-7a1a73299/))
+[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:makutualvine@gmail.com)
+
+---
+
+> _"Crafted with passion, designed for impact."_ ✨
+

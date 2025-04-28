@@ -1,7 +1,7 @@
 
 import { motion } from 'framer-motion';
 import pochiImage from './assets/profile.jpg';
-import mkulimaImage from './assets/profile.jpg';
+import mkulimaImage from './assets/mkulimahub.jpg';
 import kenyamartImage from './assets/kenyamart.jpg';
 
 const projects = [
@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Mkulima Hub",
     tech: "Flutter + Supabase",
-    description: "A community-driven app that has a marketplace,a community section,post section and more.",
+    description: "A community-driven app for farmers that has a marketplace,a community section,post section and more.",
     image: mkulimaImage,
     liveLink: "#",
     codeLink: "https://github.com/Mal-ArchLumi/mkulima-hub"
