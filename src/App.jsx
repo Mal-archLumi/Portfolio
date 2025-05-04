@@ -6,7 +6,6 @@ import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
-import Blog from './Blog';
 import './styles.css';
 
 export default function App() {
@@ -47,10 +46,7 @@ export default function App() {
               Projects
             </NavLink>
             <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
-              Contact
-            </NavLink>
-            <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : '')}>
-              Blog
+              Contact Me
             </NavLink>
           </div>
           <button onClick={() => setDarkMode(!darkMode)} className="theme-btn">
@@ -64,7 +60,6 @@ export default function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
         </Routes>
 
         <footer>
