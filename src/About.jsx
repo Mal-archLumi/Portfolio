@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import ProfilePhoto from './assets/profile.jpg';
-import Resume from './assets/resume.pdf';
+import Resume from './assets/Lumiti_Alvine_resume.pdf';
 import { FaCode, FaShieldAlt, FaServer, FaGraduationCap } from 'react-icons/fa';
 
 export default function About() {
