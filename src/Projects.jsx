@@ -1,17 +1,17 @@
 
 import { motion } from 'framer-motion';
-import pochiImage from './assets/profile.jpg';
+import DevKazi from './assets/Devkazi.png';
 import mkulimaImage from './assets/mkulimahub.jpg';
 import kenyamartImage from './assets/kenyamart.jpg';
 
 const projects = [
   {
-    title: "Pochi Yangu",
-    tech: "React + TensorFlow",
-    description: "Community-first digital wallet for chama groups and individual finance management.",
-    image: pochiImage,
+    title: "DevKazi",
+    tech: "Flutter + nestjs + Mongodb",
+    description: "Devkazi is a team-focused micro-internship platform where students form small groups, collaborate on, and complete real industry-style projects with integrated tools for teamwork, progress tracking, and verified experience.",
+    image: DevKazi,
     liveLink: "#",
-    codeLink: "https://github.com/Mal-ArchLumi/pochi-yangu"
+    codeLink: "https://github.com/Mal-ArchLumi/DevKazi"
   },
   {
     title: "Mkulima Hub",

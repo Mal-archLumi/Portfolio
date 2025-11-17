@@ -151,7 +151,7 @@ export default function Contact() {
                 <FiGithub />
               </a>
               <a 
-                href="https://www.linkedin.com/in/alvine-lumiti-7a1a73299/" 
+                href="https://www.linkedin.com/in/alvine-lumiti/" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
