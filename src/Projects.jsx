@@ -5,7 +5,7 @@ import mkulimaImage from './assets/mkulimahub.jpg';
 import kenyamartImage from './assets/kenyamart.jpg';
 
 const projects = [
-  {
+  {3
     title: "DevKazi",
     tech: "Flutter + nestjs + Mongodb",
     description: "Devkazi is a team-focused micro-internship platform where students form small groups, collaborate on, and complete real industry-style projects with integrated tools for teamwork, progress tracking, and verified experience.",

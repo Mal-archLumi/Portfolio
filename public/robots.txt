@@ -1,0 +1,17 @@
+# robots.txt for https://lumiti.netlify.app
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of build artifacts and config files
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /.vite/
+
+# Sitemap location
+Sitemap: https://lumiti.netlify.app/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1

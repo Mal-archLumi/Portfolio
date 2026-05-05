@@ -1,7 +1,24 @@
 {
-  "name": "portfolio",
+  "name": "alvine-lumiti-portfolio",
+  "version": "1.0.0",
+  "description": "Full-stack developer portfolio showcasing React, Next.js, Flutter, and Node.js projects by Alvine Lumiti",
+  "author": "Alvine Lumiti <makutualvine@gmail.com>",
+  "homepage": "https://lumiti.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mal-ArchLumi/Portfolio"
+  },
+  "keywords": [
+    "portfolio",
+    "full-stack-developer",
+    "react",
+    "nextjs",
+    "flutter",
+    "nodejs",
+    "mern-stack",
+    "software-engineer"
+  ],
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +27,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "emailjs-com": "^3.2.0",
+    "@emailjs/browser": "^4.4.1",
     "framer-motion": "^12.9.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
