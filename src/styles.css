@@ -932,11 +932,29 @@ button {
   border: 1px solid var(--border);
 }
 
+/* Mobile App Screenshots - Portrait Layout */
+.system-panel__image-container--mobile {
+  aspect-ratio: 9 / 20;
+  max-width: 280px;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
 .system-panel__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Mobile screenshots use contain instead of cover */
+.system-panel__image-container--mobile .system-panel__image {
+  object-fit: contain;
+  background: #000;
 }
 
 .system-panel:hover .system-panel__image {
@@ -2047,6 +2065,10 @@ button {
     width: 360px;
     height: 460px;
   }
+  
+  .system-panel__image-container--mobile {
+    max-width: 260px;
+  }
 }
 
 /* Tablet (768px - 1024px) */
@@ -2099,8 +2121,8 @@ button {
     gap: var(--space-lg);
   }
   
-  .system-panel__image-container {
-    aspect-ratio: 16 / 9;
+  .system-panel__image-container--mobile {
+    max-width: 200px;
   }
   
   .eng-approach__grid {
@@ -2258,6 +2280,10 @@ button {
   .system-panel__details-inner {
     padding: var(--space-md);
     gap: var(--space-md);
+  }
+  
+  .system-panel__image-container--mobile {
+    max-width: 220px;
   }
   
   .eng-identity {

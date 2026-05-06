@@ -1,13 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiExternalLink, FiGithub, FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
-import DevKazi from '../assets/Devkazi.png';
 import mkulimaImage from '../assets/mkulimahub.jpg';
 import kenyamartImage from '../assets/kenyamart.jpg';
+
+// AWS Student Builder Club screenshots
 import awsHome from '../assets/aws-student-builder-club-mku/aws-student-builder-home.png';
 import awsScreen2 from '../assets/aws-student-builder-club-mku/aws-student-builder-screen-2.png';
 import awsScreen3 from '../assets/aws-student-builder-club-mku/aws-student-builder-screen-3.png';
+
+// DevKazi screenshots
+import devkaziSplash from '../assets/devkazi-screenshots/devkazi-splashscreen.jpeg';
+import devkaziSignIn from '../assets/devkazi-screenshots/devkazi-sign-in-page.jpeg';
+import devkaziTeam from '../assets/devkazi-screenshots/team-page.jpeg';
+import devkaziTeamDark from '../assets/devkazi-screenshots/team-screen-darkmode.jpeg';
+import devkaziProject from '../assets/devkazi-screenshots/project-interface-screenshot.jpeg';
+import devkaziChat from '../assets/devkazi-screenshots/chat-page-screenshot.jpeg';
+import devkaziChatDark from '../assets/devkazi-screenshots/chat-screen-darkmode.jpeg';
 
 const SYSTEMS = [
   {
@@ -16,6 +26,7 @@ const SYSTEMS = [
     subtitle: 'Micro-Internship Platform',
     status: 'IN DEVELOPMENT',
     priority: 'high',
+    type: 'mobile', // Mobile app - portrait screenshots
     overview: 'Production-grade platform enabling student developers to form teams, execute industry-standard projects, and earn verified experience through structured micro-internships.',
     architecture: {
       client: 'Flutter mobile application with offline-first architecture',
@@ -31,7 +42,7 @@ const SYSTEMS = [
       'Offline-first mobile architecture with conflict resolution',
     ],
     deployment: 'Core platform complete. Pilot program launching Q2 2024 with initial cohort of 50 student developers.',
-    images: [DevKazi],
+    images: [devkaziSplash, devkaziSignIn, devkaziTeam, devkaziTeamDark, devkaziProject, devkaziChat, devkaziChatDark],
     links: {
       code: 'https://github.com/Mal-ArchLumi/DevKazi',
     },
@@ -42,6 +53,7 @@ const SYSTEMS = [
     subtitle: 'Cloud Education Community',
     status: 'ACTIVE',
     priority: 'high',
+    type: 'web', // Web platform - landscape screenshots
     overview: 'Technical community of student developers building cloud-native applications on AWS infrastructure. Structured curriculum, hands-on workshops, and cloud challenge programs.',
     architecture: {
       scope: 'Community building and technical education platform',
@@ -65,6 +77,7 @@ const SYSTEMS = [
     subtitle: 'Smart Farming Platform',
     status: 'DEPLOYED',
     priority: 'medium',
+    type: 'mobile', // Mobile app - portrait screenshots
     overview: 'Mobile-first platform connecting Kenyan smallholder farmers to markets and agricultural knowledge. Built with offline-first architecture for unreliable network conditions.',
     architecture: {
       client: 'Flutter mobile app with local SQLite cache',
@@ -91,6 +104,7 @@ const SYSTEMS = [
     subtitle: 'E-Commerce System',
     status: 'LIVE',
     priority: 'medium',
+    type: 'web', // Web platform - landscape screenshots
     overview: 'Full-stack e-commerce platform with complete order processing pipeline. Handles authentication, catalog management, cart system, and payment integration.',
     architecture: {
       frontend: 'Vanilla JavaScript with modular component architecture',
@@ -116,6 +130,17 @@ const SYSTEMS = [
 function SystemPanel({ system, index }) {
   const [expanded, setExpanded] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
+
+  // Auto-scroll images every 3 seconds
+  useEffect(() => {
+    if (system.images.length > 1) {
+      const interval = setInterval(() => {
+        setImageIndex((prevIndex) => (prevIndex + 1) % system.images.length);
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }
+  }, [system.images.length]);
 
   return (
     <motion.article
@@ -148,7 +173,7 @@ function SystemPanel({ system, index }) {
       <div className="system-panel__body">
         {/* Visual Preview */}
         <div className="system-panel__visual">
-          <div className="system-panel__image-container">
+          <div className={`system-panel__image-container ${system.type === 'mobile' ? 'system-panel__image-container--mobile' : ''}`}>
             <img 
               src={system.images[imageIndex]} 
               alt={`${system.title} - ${system.subtitle} built with ${system.stack.slice(0, 3).join(', ')}`}
