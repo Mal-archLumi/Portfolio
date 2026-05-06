@@ -935,7 +935,7 @@ button {
 /* Mobile App Screenshots - Portrait Layout */
 .system-panel__image-container--mobile {
   aspect-ratio: 9 / 20;
-  max-width: 280px;
+  max-width: 210px;
   margin: 0 auto;
   border-radius: 16px;
   box-shadow: 
@@ -2067,7 +2067,7 @@ button {
   }
   
   .system-panel__image-container--mobile {
-    max-width: 260px;
+    max-width: 195px;
   }
 }
 
@@ -2122,7 +2122,7 @@ button {
   }
   
   .system-panel__image-container--mobile {
-    max-width: 200px;
+    max-width: 150px;
   }
   
   .eng-approach__grid {
@@ -2283,7 +2283,7 @@ button {
   }
   
   .system-panel__image-container--mobile {
-    max-width: 220px;
+    max-width: 165px;
   }
   
   .eng-identity {
