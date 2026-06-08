@@ -19,14 +19,45 @@ import devkaziProject from '../assets/devkazi-screenshots/project-interface-scre
 import devkaziChat from '../assets/devkazi-screenshots/chat-page-screenshot.jpeg';
 import devkaziChatDark from '../assets/devkazi-screenshots/chat-screen-darkmode.jpeg';
 
+// QR Master screenshots
+import qrMasterImage from '../assets/qr-master.png';
+
 const SYSTEMS = [
   {
     id: 'SYS_01',
+    title: 'QR Master',
+    subtitle: 'QR Code & ID Card Automation System',
+    status: 'DEPLOYED',
+    priority: 'high',
+    type: 'desktop',
+    overview: 'Python-based desktop application that automates ID card production for hospital staff and nursing students. Eliminates manual data entry, batch processes QR codes, matches photos automatically, and streamlines the entire workflow from data to production-ready assets.',
+    architecture: {
+      client: 'Python desktop application with Tkinter/PyQt GUI',
+      processing: 'Batch QR code generation with custom encoding',
+      data: 'CSV/Excel data ingestion with automated asset matching',
+      output: 'Production-ready ID card templates with embedded QR codes',
+    },
+    stack: ['Python', 'QR Code Generation', 'Pillow/PIL', 'CSV Processing', 'Desktop Automation'],
+    engineering: [
+      'Bulk QR code generation eliminating per-user manual creation',
+      'Automated photo matching from separate asset directories',
+      'Streamlined file naming and organization system',
+      'Reduced processing time from hours to minutes',
+      'Minimized human error through systematic automation',
+    ],
+    deployment: 'Actively used in real-world healthcare environment for staff and nursing student ID production. Delivers measurable operational improvements daily.',
+    images: [qrMasterImage],
+    links: {
+      code: 'https://github.com/Mal-ArchLumi/qr-master', // Update with your actual repo URL
+    },
+  },
+  {
+    id: 'SYS_02',
     title: 'DevKazi',
     subtitle: 'Micro-Internship Platform',
     status: 'IN DEVELOPMENT',
     priority: 'high',
-    type: 'mobile', // Mobile app - portrait screenshots
+    type: 'mobile',
     overview: 'Production-grade platform enabling student developers to form teams, execute industry-standard projects, and earn verified experience through structured micro-internships.',
     architecture: {
       client: 'Flutter mobile application with offline-first architecture',
@@ -48,12 +79,12 @@ const SYSTEMS = [
     },
   },
   {
-    id: 'SYS_02',
+    id: 'SYS_03',
     title: 'AWS Student Builder Club',
     subtitle: 'Cloud Education Community',
     status: 'ACTIVE',
     priority: 'high',
-    type: 'web', // Web platform - landscape screenshots
+    type: 'web',
     overview: 'Technical community of student developers building cloud-native applications on AWS infrastructure. Structured curriculum, hands-on workshops, and cloud challenge programs.',
     architecture: {
       scope: 'Community building and technical education platform',
@@ -72,12 +103,12 @@ const SYSTEMS = [
     links: {},
   },
   {
-    id: 'SYS_03',
+    id: 'SYS_04',
     title: 'Mkulima Hub',
     subtitle: 'Smart Farming Platform',
     status: 'DEPLOYED',
     priority: 'medium',
-    type: 'mobile', // Mobile app - portrait screenshots
+    type: 'mobile',
     overview: 'Mobile-first platform connecting Kenyan smallholder farmers to markets and agricultural knowledge. Built with offline-first architecture for unreliable network conditions.',
     architecture: {
       client: 'Flutter mobile app with local SQLite cache',
@@ -99,12 +130,12 @@ const SYSTEMS = [
     },
   },
   {
-    id: 'SYS_04',
+    id: 'SYS_05',
     title: 'KenyaMart',
     subtitle: 'E-Commerce System',
     status: 'LIVE',
     priority: 'medium',
-    type: 'web', // Web platform - landscape screenshots
+    type: 'web',
     overview: 'Full-stack e-commerce platform with complete order processing pipeline. Handles authentication, catalog management, cart system, and payment integration.',
     architecture: {
       frontend: 'Vanilla JavaScript with modular component architecture',
@@ -127,17 +158,16 @@ const SYSTEMS = [
   },
 ];
 
+// Rest of your component code remains the same...
 function SystemPanel({ system, index }) {
   const [expanded, setExpanded] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
 
-  // Auto-scroll images every 3 seconds
   useEffect(() => {
     if (system.images.length > 1) {
       const interval = setInterval(() => {
         setImageIndex((prevIndex) => (prevIndex + 1) % system.images.length);
       }, 3000);
-
       return () => clearInterval(interval);
     }
   }, [system.images.length]);
@@ -150,7 +180,6 @@ function SystemPanel({ system, index }) {
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.6, delay: index * 0.12, ease: [0.2, 0.8, 0.2, 1] }}
     >
-      {/* System Header */}
       <div className="system-panel__header">
         <div className="system-panel__meta">
           <div className="system-panel__id">{system.id}</div>
@@ -169,11 +198,9 @@ function SystemPanel({ system, index }) {
         </div>
       </div>
 
-      {/* System Body */}
       <div className="system-panel__body">
-        {/* Visual Preview */}
         <div className="system-panel__visual">
-          <div className={`system-panel__image-container ${system.type === 'mobile' ? 'system-panel__image-container--mobile' : ''}`}>
+          <div className={`system-panel__image-container ${system.type === 'mobile' ? 'system-panel__image-container--mobile' : system.type === 'desktop' ? 'system-panel__image-container--desktop' : ''}`}>
             <img 
               src={system.images[imageIndex]} 
               alt={`${system.title} - ${system.subtitle} built with ${system.stack.slice(0, 3).join(', ')}`}
@@ -194,14 +221,12 @@ function SystemPanel({ system, index }) {
           </div>
         </div>
 
-        {/* System Overview */}
         <div className="system-panel__content">
           <div className="system-panel__section">
             <h4 className="system-panel__section-title">System Overview</h4>
             <p className="system-panel__overview">{system.overview}</p>
           </div>
 
-          {/* Tech Stack */}
           <div className="system-panel__section">
             <h4 className="system-panel__section-title">Technology Stack</h4>
             <div className="system-panel__stack">
@@ -211,13 +236,11 @@ function SystemPanel({ system, index }) {
             </div>
           </div>
 
-          {/* Deployment Status */}
           <div className="system-panel__section">
             <h4 className="system-panel__section-title">Deployment</h4>
             <p className="system-panel__deployment">{system.deployment}</p>
           </div>
 
-          {/* Links */}
           {(system.links.live || system.links.code) && (
             <div className="system-panel__links">
               {system.links.live && (
@@ -247,7 +270,6 @@ function SystemPanel({ system, index }) {
         </div>
       </div>
 
-      {/* Expandable Technical Details */}
       <div className="system-panel__expand">
         <button
           className="system-panel__expand-trigger"
@@ -268,7 +290,6 @@ function SystemPanel({ system, index }) {
               transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
             >
               <div className="system-panel__details-inner">
-                {/* Architecture Breakdown */}
                 <div className="system-panel__arch">
                   <h5 className="system-panel__arch-title">Architecture Components</h5>
                   <div className="system-panel__arch-grid">
@@ -281,7 +302,6 @@ function SystemPanel({ system, index }) {
                   </div>
                 </div>
 
-                {/* Engineering Notes */}
                 <div className="system-panel__engineering">
                   <h5 className="system-panel__engineering-title">Engineering Decisions</h5>
                   <ul className="system-panel__engineering-list">
@@ -306,7 +326,7 @@ export default function Projects() {
         <div className="section__label">Engineering Portfolio</div>
         <h2 className="section__title">Production Systems</h2>
         <p className="section__subtitle">
-          Full-stack development projects built with React, Next.js, Flutter, and Node.js. Each system represents
+          Full-stack development projects built with Python, React, Next.js, Flutter, and Node.js. Each system represents
           real engineering work — from architecture and backend development to deployment and production impact.
         </p>
       </header>
